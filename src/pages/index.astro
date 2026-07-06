@@ -1,5 +1,7 @@
 ---
+import NavBar from '../components/NavBar.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,4 +9,32 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+	<NavBar />
+     <Hero>
+    <div id="banner">
+      <h1>Bugnet</h1>
+      <h3>From larva to launch, we've got you covered!</h3>
+      <button>Get In Touch</button>
+      <button>See Our Work</button>
+    </div>
+  </Hero>
+	<div id="trustStrip">
+		<h1> Trust Strip here! </h1>
+		<button>See more</button>
+	</div>
+	<div id="aboutUs">
+		<h1> About Us </h1>
+		<button>See more</button>
+	</div>
+	<div id="aboutUs">
+		<h1> About Us </h1>
+		<button>See more</button>
+	</div>
+	<div id="ourWork">
+		<h1>Our Work </h1>
+		<button>See more</button>
+	</div>
+	<div id="Socials">
+		<h1>Connect with Us! </h1>
+	</div>
 </Layout>
