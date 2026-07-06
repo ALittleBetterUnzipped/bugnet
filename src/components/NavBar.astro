@@ -1,10 +1,14 @@
-<ul>
-  <li>Bugnet</li>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+<div class="navigationBar">
+      <h3>Bugnet</h3>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</div>
+
+
 
 <head>
 <style>
@@ -17,23 +21,42 @@ h2, p {
   margin: 10px;
 }
 
+.navigationBar {
+  overflow: hidden;
+  background-color: #333745;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 ul {
+  justify-content: right;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #333333;
+  background-color: #333745;
   display: flex;
+  font-family: 'Quicksand', sans-serif;  
+  color: #FFFF;
 }
 
 ul li a {
   display: block;
-  color: white;
+  color: #FFFFFF;
   padding: 14px 16px;
   text-decoration: none;
+  float: right;
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: #c7efcf;
+}
+
+h3 {
+  color: #FFFFFF;
+  float: left;
+  font-Family: 'Quicksand', sans-serif;
 }
 </style>
 </head>
