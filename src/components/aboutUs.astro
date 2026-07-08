@@ -1,0 +1,58 @@
+<div class="aboutUs">
+        <h1>About Us </h1>
+        <div class="aboutUsCardRow">
+            <div class="aboutDawid">
+                <h3>Dawid Malolepszy</h3>
+                <h4> 3rd Year BSc Software Engineering student</h4>
+            </div>
+            <div class="aboutAbbie">
+                <h3>Abbie Thompson</h3>
+                <h4> 3rd Year BSc Computer Science student</h4>
+            </div>
+        </div>
+        <button class="button">See more</button>
+        <slot />
+</div>
+
+<style>
+        .aboutUs {
+        padding: 2rem 4rem 4rem;
+        position: relative;
+        overflow: hidden;
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Quicksand', sans-serif;  
+        color: #000000;
+        justify-content: center;
+        text-align: left;
+        gap: 1.5rem;
+
+    }
+
+    .aboutUsCardRow {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .aboutDawid, .aboutAbbie {
+        background-color: #c7efcf;
+        padding: 1rem;
+        border-radius: 8px;
+        border:#b7e1be 3px solid;
+        width: min(45%, 420px);
+    }
+
+    .button{
+        background-color: #Fe5f55;
+        border: none;
+        font-family: 'Quicksand', sans-serif; 
+        color: #FFFFFF;
+        padding: 0.5rem 1rem;
+        border-radius: 32px;
+        cursor: pointer;
+    }
+</style>
