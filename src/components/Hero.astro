@@ -1,27 +1,37 @@
 ---
 // src/components/Hero.astro
-
-const{
-    headline = "From Larva to Launch"
+import Net from './InteractiveNet.astro';
+ 
+const {
+  headline = "From Larva to Launch"
 } = Astro.props;
-
 ---
-
+ 
 <section class="hero">
-  <div class="container">
+  <Net
+    overlay
+    nodeColor="rgba(255, 255, 255, 0.75)"
+    lineColor="rgba(255, 255, 255, 0.2)"
+    nodeSpacing={9000}
+    linkDistance={130}
+    mouseRadius={150}
+  />
+ <div class="container">
     <slot />
-    <button class="button">See More</button>
-    <button class="button">Talk To Us</button>
+    <div class="button-group">
+      <button class="button">About Us</button>
+      <button class="button">Let's Connect</button>
+    </div>
   </div>
 </section>
-
-
+ 
+ 
 <style>
-
+ 
 /* ====== Import Fonts ===== */
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
-
+ 
   /* ===== Hero Section ===== */
 .hero {
     padding: 4rem 4rem 4rem;
@@ -35,29 +45,53 @@ const{
     font-family: 'Quicksand', sans-serif;  
     color: #FFFF;
     justify-content: center;
-    text-align: left;       
+    text-align: left;      
 }
 
+ 
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+ 
   #banner {
     text-align: center;
     width: 100%;
   }
-
+ 
   #banner h1 {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     margin: 0;
   }
+ 
+  /* Button group with flexbox spacing */
+.button-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+}
+ 
+.button {
+    background-color: #333745;
+    border: none;
+    font-family: 'Quicksand', sans-serif; 
+    color: #FFFFFF;
+    padding: 0.75rem 2rem; /* Slightly larger padding */
+    border-radius: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
 
-    .button{
-        background-color: #333745;
-        border: none;
-        font-family: 'Quicksand', sans-serif; 
-        color: #FFFFFF;
-        padding: 0.5rem 1rem;
-        border-radius: 32px;
-        cursor: pointer;
-    }
-
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+ 
 </style>
