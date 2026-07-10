@@ -10,6 +10,8 @@ const{
 <section class="hero">
   <div class="container">
     <slot />
+    <button class="button">See More</button>
+    <button class="button">Talk To Us</button>
   </div>
 </section>
 
@@ -48,16 +50,14 @@ const{
     margin: 0;
   }
 
-#banner button {
-        padding: 0.8rem 2.5rem;
+    .button{
+        background-color: #333745;
         border: none;
-        border-radius: 100px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 600;
-        font-size: 1rem;
+        font-family: 'Quicksand', sans-serif; 
+        color: #FFFFFF;
+        padding: 0.5rem 1rem;
+        border-radius: 32px;
         cursor: pointer;
-        transition: all 0.3s ease;
-        margin: 0 0.5rem;
     }
 
 </style>
