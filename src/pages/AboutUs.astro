@@ -1,0 +1,78 @@
+---
+import NavBar from '../components/NavBar.astro';
+---
+<NavBar />
+<div class="aboutUs">
+        <h1>About Us </h1>
+        <div class="aboutUsCardRow">
+            <div class="aboutDawid">
+                <div class="icon image">
+                    <img src="/dawid.jpg" width="150" height="150" alt="Dawid Malolepszy" />
+                </div>
+                <div class="text">
+                    <h3>Dawid Malolepszy</h3>
+                <h4> 3rd Year BSc Software Engineering student</h4>
+                </div>
+                
+            </div>
+            <div class="aboutAbbie">
+                <div class="icon image">
+                    <img src="/abbie.jpg" width="150" height="150" alt="Abbie Thompson" />
+                </div>
+                <div class="text">
+                    <h3>Abbie Thompson</h3>
+                    <h4> 3rd Year BSc Computer Science student</h4>
+                </div>
+            </div>
+        </div>
+        <slot />
+</div>
+
+<style>
+        .aboutUs {
+        padding: 2rem 4rem 4rem;
+        position: relative;
+        overflow: hidden;
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Quicksand', sans-serif;  
+        color: #000000;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+
+
+    }
+
+    .aboutUsCardColumn {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .aboutDawid, .aboutAbbie {
+        background-color: #FFFFFF;
+        padding: 1rem;
+        border-radius: 8px;
+        border:#e0dfdf 3px solid;
+        width: min(45%, 420px);
+        text-align: left;
+        disply: flex;
+        flex-direction: row;
+    }
+
+    .button{
+        background-color: #Fe5f55;
+        border: none;
+        font-family: 'Quicksand', sans-serif; 
+        color: #FFFFFF;
+        padding: 0.5rem 1rem;
+        border-radius: 32px;
+        cursor: pointer;
+    }
+
+</style>
+

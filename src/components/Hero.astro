@@ -19,8 +19,8 @@ const {
  <div class="container">
     <slot />
     <div class="button-group">
-      <button class="button">About Us</button>
-      <button class="button">Let's Connect</button>
+      <a href="/AboutUs" class="button">About Us</a>
+      <a href="/contact" class="button">Let's Connect</a>
     </div>
   </div>
 </section>
@@ -95,3 +95,12 @@ const {
 }
  
 </style>
+
+<script>
+import {navigate} from 'astro:transitions/client';
+const button = document.getElementById('aboutUsButton');
+button?.addEventListener('click', () => {
+  navigate('/AboutUs');
+});
+
+</script>
